@@ -22,7 +22,11 @@ public class WaterDropper : MonoBehaviour
             timesincedrop = 0;
             GameObject dropletInstance = Instantiate(droplet, transform.position, transform.rotation);
             dropletInstance.GetComponent<WaterDropHit>().camera = camera;
-
+           // ParticleSystem.EmissionModule e = dropletInstance.GetComponentInChildren<ParticleSystem>().emission;
+            //  e.rateOverTimeMultiplier=1;
+            //dropletInstance.GetComponentInChildren<ParticleSystem>().emission = e;
+            dropletInstance.GetComponent<WaterDropHit>().filllevel = .1f * delay;
+            dropletInstance.transform.localScale = gameObject.transform.localScale;
         }
     }
 }
