@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float speed = 2;
+    private float speed = 4;
     private bool belowTop, aboveBottom, goingUp, goingDown;
 
     public float camSens = 4f; //camera sensitivity
