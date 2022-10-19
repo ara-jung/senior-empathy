@@ -358,12 +358,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Input/PlayerInput.cs"
-"Assets/MouseLook.cs"
 "Assets/Script/DistanceAppear/OnTrigger.cs"
 "Assets/Script/PhotoTaking/PhotoCapture.cs"
 "Assets/Script/PlayerControl/InputManager.cs"
 "Assets/Script/PlayerControl/PlayerLook.cs"
 "Assets/Script/PlayerControl/PlayerMotor.cs"
+"Assets/Script/RayCastCheck/RayCasting.cs"
 -langversion:9.0
 
 /deterministic
