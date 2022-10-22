@@ -7,12 +7,13 @@ public class OnTrigger : MonoBehaviour
     [SerializeField] private Animator fadingAnimation;
 
     private void Start(){
-        
+        this.gameObject.GetComponent<Renderer>().enabled = false;
     }
     void OnTriggerEnter(Collider other)
     {
-        this.fadingAnimation.Play("FadeIn");
-       StartCoroutine("waitForPlay");
+       this.gameObject.GetComponent<Renderer>().enabled = true;
+       this.fadingAnimation.Play("FadeIn");
+       //StartCoroutine("waitForPlay");
     }
 
 
