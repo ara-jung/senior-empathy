@@ -5,27 +5,22 @@ using UnityEngine;
 public class RayCasting : MonoBehaviour
 {
     public Camera camera;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    public bool checkAlign = false;
     // Update is called once per frame
     void Update()
     {
        int layerMask = 1 << 3; 
-        Debug.Log(camera.transform.position);
-       RaycastHit hit;
-       if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, 3f, layerMask))
+        RaycastHit[] hits;
+        hits = Physics.RaycastAll(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), 20f, layerMask, QueryTriggerInteraction.Ignore);
+        if (hits.Length == 2) 
         {
             Debug.DrawRay(camera.transform.position, camera.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-            Debug.Log(hit.transform.name);
+            checkAlign = true;
         }
-        else
+        else 
         {
             Debug.DrawRay(camera.transform.position, camera.transform.TransformDirection(Vector3.forward) * 1000, Color.white);
-            Debug.Log("Did not Hit");
+            checkAlign = false;
         }
     }
 }

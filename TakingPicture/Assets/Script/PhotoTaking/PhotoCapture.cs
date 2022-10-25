@@ -22,6 +22,7 @@ public class PhotoCapture : MonoBehaviour
 
     [Header("Camera Audio")]
     [SerializeField] private AudioSource cameraAudio;
+    private RayCasting cast;
 
     private bool enterCameraScope = false;
 
@@ -33,6 +34,7 @@ public class PhotoCapture : MonoBehaviour
 
     private void Start()
     {
+        cast = GetComponent<RayCasting>();
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         cameraUI.SetActive(false);
     }
@@ -67,6 +69,10 @@ public class PhotoCapture : MonoBehaviour
             if (!viewingPhoto)
             {
                 StartCoroutine(CapturePhoto());
+                if (cast.checkAlign)
+                {
+                    Debug.Log("object appear");
+                }
             }
             else
             {
