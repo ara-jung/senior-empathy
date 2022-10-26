@@ -24,6 +24,8 @@ public class PhotoCapture : MonoBehaviour
     [SerializeField] private AudioSource cameraAudio;
     private RayCasting cast;
 
+    private WaterRising waterRise;
+
     private bool enterCameraScope = false;
 
 
@@ -35,6 +37,8 @@ public class PhotoCapture : MonoBehaviour
     private void Start()
     {
         cast = GetComponent<RayCasting>();
+        waterRise = GetComponent<WaterRising>();
+        Debug.Log(waterRise);
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         cameraUI.SetActive(false);
     }
@@ -72,6 +76,8 @@ public class PhotoCapture : MonoBehaviour
                 if (cast.checkAlign)
                 {
                     Debug.Log("object appear");
+                    cast.hit.collider.gameObject.SetActive(false);
+                    waterRise.PlayWaterRisingAnimmation();
                 }
             }
             else

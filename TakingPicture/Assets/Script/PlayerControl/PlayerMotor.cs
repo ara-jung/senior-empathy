@@ -8,6 +8,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 playerVelocity;
     private bool isGrounded;
 
+    [SerializeField] private AudioSource walking;
     public float speed = 5f;
     public float gravity = -9.8f;
     public float jumpHeight = 3f;
@@ -28,6 +29,8 @@ public class PlayerMotor : MonoBehaviour
     {
         Vector3 moveDirection = Vector3.zero;
         moveDirection.x = input.x;
+        Debug.Log(input.x);
+        Debug.Log(input.y);
         moveDirection.z = input.y;
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
         if(isGrounded && playerVelocity.y < 0)
@@ -36,6 +39,14 @@ public class PlayerMotor : MonoBehaviour
         }
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+        if((input.y != 0 || input.x != 0) && isGrounded) 
+        {
+            walking.enabled = true;
+        }
+        else 
+        {
+            walking.enabled = false;
+        }
     }
 
     public void Jump()

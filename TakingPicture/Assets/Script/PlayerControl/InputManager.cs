@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     private PlayerMotor motor;
 
     private PhotoCapture takePic;
+    
     // Start is called before the first frame update
     void Awake()
     {
