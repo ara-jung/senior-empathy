@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{D915932F-947F-7592-A2E8-4E64F23B6009}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../scene3_2prototype1/scene3prototype1/Assets/WaterSim2D.cs">
+    <Files>
+      <File FileName="Assets/ContainerFill.cs" Line="82" Column="9" />
+      <File FileName="Assets/WaterDropHit.cs" Line="115" Column="37" />
+      <File FileName="Assets/PlayerMovement.cs" Line="24" Column="27" />
+      <File FileName="shadedgradient.shader" Line="62" Column="73" />
+      <File FileName="../scene3_2prototype1/scene3prototype1/Assets/WaterSim2D.cs" Line="60" Column="45" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -36,6 +36,7 @@ public class PhotoCapture : MonoBehaviour
     {
         cast = GetComponent<RayCasting>();
         screenCapture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+
         cameraUI.SetActive(false);
     }
 
