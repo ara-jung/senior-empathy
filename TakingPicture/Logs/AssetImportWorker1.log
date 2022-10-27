@@ -4382,3 +4382,230 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003068 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/Gavin/Documents/5110/wet-dream/TakingPicture/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/Gavin/Documents/5110/wet-dream/TakingPicture/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 2.26 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.909 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2913ms)
+		BeginReloadAssembly (892ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (25ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (446ms)
+		EndReloadAssembly (1846ms)
+			LoadAssemblies (388ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (726ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (100ms)
+			SetupLoadedEditorAssemblies (712ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (555ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.68 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4019 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (92.7 KB). Loaded Objects now: 5745.
+Memory consumption went from 323.6 MB to 323.5 MB.
+Total: 6.034759 ms (FindLiveObjects: 0.606575 ms CreateObjectMapping: 0.463631 ms MarkObjects: 4.888804 ms  DeleteObjects: 0.074500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: b23960f63f64bdc6ff669e2cdcee2391 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 602.675926 seconds.
+  path: Assets/Whaleride/Hand Painted Tree A (2021 Collection)/FBX/New Material.mat
+  artifactKey: Guid(9e3c39ebad44a404b84052489ee655a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Whaleride/Hand Painted Tree A (2021 Collection)/FBX/New Material.mat using Guid(9e3c39ebad44a404b84052489ee655a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a8a1aafdb9409eaa5e196dd865f4c5b') in 1.094490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.879802 seconds.
+  path: Assets/ToysPack/Models/Ball_01.fbx
+  artifactKey: Guid(371e9db7876995147bceca5c0aa742ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Ball_01.fbx using Guid(371e9db7876995147bceca5c0aa742ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54d664c26e0c88813e47c42f06f8ce6f') in 0.719439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/ToysPack/Models/Doll_01.fbx
+  artifactKey: Guid(bc062b81cd3fbf746bd0f1e618d8451d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Doll_01.fbx using Guid(bc062b81cd3fbf746bd0f1e618d8451d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c576553f8370537c5728ca64c311a0c4') in 0.407550 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ToysPack/Models/Car_03.fbx
+  artifactKey: Guid(04f6a41fda4a1bd4bb83e658e29ff57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Car_03.fbx using Guid(04f6a41fda4a1bd4bb83e658e29ff57b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d29ba15f95d94f5ce802eb2805ac499') in 0.130912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.002648 seconds.
+  path: Assets/ToysPack/Models/Bicycle_01.fbx
+  artifactKey: Guid(ebe3092d88f43d648827754b51125338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Bicycle_01.fbx using Guid(ebe3092d88f43d648827754b51125338) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a08232edad0307c756ec637c2792646') in 0.068350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/ToysPack/Models/Basketball_01.fbx
+  artifactKey: Guid(af7ee3dde2d6aab4184f28fac36eafb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Basketball_01.fbx using Guid(af7ee3dde2d6aab4184f28fac36eafb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8acf8f7f6ee50ad3f61f3670f27179f') in 0.065225 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/ToysPack/Models/Basketballhoop_01.fbx
+  artifactKey: Guid(c1d3782c7fdc9184daffd83f30a74e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Basketballhoop_01.fbx using Guid(c1d3782c7fdc9184daffd83f30a74e1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '579070c2a398466d355eef9afcb0b882') in 0.125776 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/ToysPack/Models/Car_04.fbx
+  artifactKey: Guid(ca5405edf02a7b4499abc74164e4cbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Car_04.fbx using Guid(ca5405edf02a7b4499abc74164e4cbbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eba951188eaa4a4fbb672715dfab280') in 0.046911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/ToysPack/Models/Boat_01.fbx
+  artifactKey: Guid(f87d06c3b1b0e9148b74e9d00ee58d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Boat_01.fbx using Guid(f87d06c3b1b0e9148b74e9d00ee58d90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b0845ae84fc9525323ae1113776ee2') in 0.076618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000094 seconds.
+  path: Assets/ToysPack/Models/Car_02.fbx
+  artifactKey: Guid(6a2bafb17b54ec84685a430b1fd2d302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Car_02.fbx using Guid(6a2bafb17b54ec84685a430b1fd2d302) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bc6e17f75abaf7b15faa7d76b75b2c6') in 0.053842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/ToysPack/Models/Doll_02.fbx
+  artifactKey: Guid(7006c80f28486e7489516fad7a3d5daa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Doll_02.fbx using Guid(7006c80f28486e7489516fad7a3d5daa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd995739e42c0334f5b7493068b98d84a') in 0.191845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/ToysPack/Models/Watergun_02.fbx
+  artifactKey: Guid(e26d4340e68b8e64c84b224cf3a1d68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Watergun_02.fbx using Guid(e26d4340e68b8e64c84b224cf3a1d68d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05f4d830260675032317c910c4f214d7') in 0.098997 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/ToysPack/Models/Sheep_01.fbx
+  artifactKey: Guid(8d61902f9d9b00d48bd788cbc265a961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Sheep_01.fbx using Guid(8d61902f9d9b00d48bd788cbc265a961) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8772ad6f5d640b2efcf217daabc1afe9') in 0.126657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/ToysPack/Models/TeddyBear_01.fbx
+  artifactKey: Guid(5a0fba4e5bb002842aef6b8c0610bcd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/TeddyBear_01.fbx using Guid(5a0fba4e5bb002842aef6b8c0610bcd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91955a1421272ec1056cb2c6244ddf2d') in 0.073328 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/ToysPack/Models/ToyStacker_01.fbx
+  artifactKey: Guid(017e5267fc5f3244cb78c675596c51e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/ToyStacker_01.fbx using Guid(017e5267fc5f3244cb78c675596c51e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07efe9901d85122d514119e774f59418') in 0.053233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/ToysPack/Models/Shovel_01.fbx
+  artifactKey: Guid(78083257c4b755f4e991c279375b4d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Shovel_01.fbx using Guid(78083257c4b755f4e991c279375b4d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8e48840049b781097f9e5e7e6db2ba5') in 0.101158 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/ToysPack/Models/Boat_02.fbx
+  artifactKey: Guid(d4637ea2b81e094469f3c7f95ba0108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Boat_02.fbx using Guid(d4637ea2b81e094469f3c7f95ba0108c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fc2905226c98e8f6406ff001d8f1d6d') in 0.175560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/ToysPack/Models/Shield_01.fbx
+  artifactKey: Guid(74bbaf81ce79343419ee35c9b48658a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Shield_01.fbx using Guid(74bbaf81ce79343419ee35c9b48658a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a12a42e0babecde612668a3cbdc55c8') in 0.040148 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000104 seconds.
+  path: Assets/ToysPack/Models/Bunny_01.fbx
+  artifactKey: Guid(2ac6829403a2bd341a75894c00db1769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Bunny_01.fbx using Guid(2ac6829403a2bd341a75894c00db1769) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469cdcf4a8ffa44dfaf118fbcb68bca9') in 0.045266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000619 seconds.
+  path: Assets/ToysPack/Models/Car_01.fbx
+  artifactKey: Guid(8d2bbd1d223b22b49832b91ac5b322ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Car_01.fbx using Guid(8d2bbd1d223b22b49832b91ac5b322ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bce9c74ab8fa854e094eeba038c9e21') in 0.030263 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/ToysPack/Models/WoodenTrain_01.fbx
+  artifactKey: Guid(dc6a99a587dea8c45b12db70757e08fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/WoodenTrain_01.fbx using Guid(dc6a99a587dea8c45b12db70757e08fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3908ad380b86824280e3b8bb243957ac') in 0.612335 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/ToysPack/Models/Darts_01.fbx
+  artifactKey: Guid(1eed9640036c31147b592a19b022e179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Darts_01.fbx using Guid(1eed9640036c31147b592a19b022e179) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a4be5772c3c3ba2b52b681170852eb8') in 0.269159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/ToysPack/Models/ToyBlocks_01.fbx
+  artifactKey: Guid(f202298ccb5d7f145a673ac42878b49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/ToyBlocks_01.fbx using Guid(f202298ccb5d7f145a673ac42878b49d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bbe0a003be4bf6bb5574039ff993bf6') in 1.809759 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.344624 seconds.
+  path: Assets/ToysPack/Models/Piano_01.fbx
+  artifactKey: Guid(48f94fd94561f33418f183d80658d0ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Piano_01.fbx using Guid(48f94fd94561f33418f183d80658d0ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dac4976880c4abb408650d34c0a85ef') in 0.082354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/ToysPack/Models/Plane_01.fbx
+  artifactKey: Guid(de9b46797317e4e4281c40672c6b094d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Plane_01.fbx using Guid(de9b46797317e4e4281c40672c6b094d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503c7bdde9536cf721baf272105d8ba5') in 0.061113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/ToysPack/Models/RockingHorse_01.fbx
+  artifactKey: Guid(0b1be9e0364a83f49a2b682bbc815b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/RockingHorse_01.fbx using Guid(0b1be9e0364a83f49a2b682bbc815b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec677c85cd6f695c1f4567d9c7c4ac91') in 0.043337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/ToysPack/Models/RubberDuck_01.fbx
+  artifactKey: Guid(c64847829113b3f42975917b8f6a9a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/RubberDuck_01.fbx using Guid(c64847829113b3f42975917b8f6a9a80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'becede0a3d7a2cf920315734633e9d63') in 0.078315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ToysPack/Models/Rocket_01.fbx
+  artifactKey: Guid(afa1249c2a6a12048992fe5d0f6677fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ToysPack/Models/Rocket_01.fbx using Guid(afa1249c2a6a12048992fe5d0f6677fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a57c8f20d62fcc5d12ac75fb0dc1e2b3') in 0.125895 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
