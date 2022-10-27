@@ -20,13 +20,13 @@ public class RayCasting : MonoBehaviour
         {
             Debug.DrawRay(camera.transform.position, camera.transform.TransformDirection(Vector3.forward) * 1000, Color.red);
             checkAlign = true;
-            Debug.Log("aligned");
+            
         }
         else 
         {
             Debug.DrawRay(camera.transform.position, camera.transform.TransformDirection(Vector3.forward) * 1000, Color.white);
             checkAlign = false;
-            Debug.Log(hits);
+           
             
         }
     }

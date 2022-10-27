@@ -20,7 +20,7 @@ public class InputManager : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         takePic = GetComponent<PhotoCapture>();
-        onFoot.Jump.performed += ctx => motor.Jump();
+        // onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
         onFoot.TakePicture.performed += ctx => takePic.TakePhoto();
     }
