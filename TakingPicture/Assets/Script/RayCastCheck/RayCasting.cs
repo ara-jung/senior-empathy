@@ -6,6 +6,7 @@ public class RayCasting : MonoBehaviour
 {
     public Camera camera;
     public bool checkAlign = false;
+    public bool isCorrectPosition = false;
     // Update is called once per frame
     void Update()
     {

@@ -2364,6 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823f002aaa2a59a4999137668489d4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walking: {fileID: 0}
   speed: 5
   gravity: -9.8
   jumpHeight: 3
@@ -2427,3 +2428,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 963194227}
   checkAlign: 0
+  isCorrectPosition: 0

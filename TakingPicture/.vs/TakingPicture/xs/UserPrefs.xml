@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{845C1347-2DCF-3D81-09A1-9C00463FAB6E}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/WaterDropHit.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerControl/PlayerMotor.cs">
     <Files>
-      <File FileName="Assets/Script/PlayerControl/PlayerLook.cs" Line="7" Column="23" />
-      <File FileName="Assets/DoorOpen.cs" Line="32" Column="10" />
-      <File FileName="Assets/WaterDropHit.cs" Line="82" Column="26" />
-      <File FileName="Assets/ContainerFill.cs" Line="86" Column="11" />
-      <File FileName="Assets/photoreveal.cs" Line="30" Column="31" />
-      <File FileName="Assets/WaterDropper.cs" Line="9" Column="30" />
+      <File FileName="Assets/Script/RayCastCheck/CheckPosition.cs" Line="10" Column="49" />
+      <File FileName="Assets/Script/RayCastCheck/RayCasting.cs" Line="8" Column="34" />
+      <File FileName="Assets/DoorOpen.cs" Line="33" Column="1" />
+      <File FileName="Assets/Script/Level3SoundControl/SoundControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/PlayerControl/PlayerMotor.cs" Line="38" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
