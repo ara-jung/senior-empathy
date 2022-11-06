@@ -71,6 +71,42 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArrowDown"",
+                    ""type"": ""Button"",
+                    ""id"": ""f2b4d2ce-9e57-478b-8b65-755e83e783bd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArrowUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""26d5c3d5-738c-4611-b98e-4be961cc3175"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArrowLeft"",
+                    ""type"": ""Button"",
+                    ""id"": ""93d45140-e4f6-4910-b335-51c56e880d1c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ArrowRight"",
+                    ""type"": ""Button"",
+                    ""id"": ""445d4e15-84b1-4cb7-b9c0-9c51f2880396"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +208,50 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""TakePicture"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""01309039-9504-4fc1-b405-8e677675cf3d"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArrowDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5db08e9-7f4b-417c-8463-f71505db7615"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArrowUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77fcd3ab-eaca-4f6b-85c7-a30ebaf521f8"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArrowLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""722dd11d-088f-428a-b6d7-bd74153aeecf"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ArrowRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +265,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Look = m_OnFoot.FindAction("Look", throwIfNotFound: true);
         m_OnFoot_OpenCamera = m_OnFoot.FindAction("OpenCamera", throwIfNotFound: true);
         m_OnFoot_TakePicture = m_OnFoot.FindAction("TakePicture", throwIfNotFound: true);
+        m_OnFoot_ArrowDown = m_OnFoot.FindAction("ArrowDown", throwIfNotFound: true);
+        m_OnFoot_ArrowUp = m_OnFoot.FindAction("ArrowUp", throwIfNotFound: true);
+        m_OnFoot_ArrowLeft = m_OnFoot.FindAction("ArrowLeft", throwIfNotFound: true);
+        m_OnFoot_ArrowRight = m_OnFoot.FindAction("ArrowRight", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +333,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Look;
     private readonly InputAction m_OnFoot_OpenCamera;
     private readonly InputAction m_OnFoot_TakePicture;
+    private readonly InputAction m_OnFoot_ArrowDown;
+    private readonly InputAction m_OnFoot_ArrowUp;
+    private readonly InputAction m_OnFoot_ArrowLeft;
+    private readonly InputAction m_OnFoot_ArrowRight;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -258,6 +346,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_OnFoot_Look;
         public InputAction @OpenCamera => m_Wrapper.m_OnFoot_OpenCamera;
         public InputAction @TakePicture => m_Wrapper.m_OnFoot_TakePicture;
+        public InputAction @ArrowDown => m_Wrapper.m_OnFoot_ArrowDown;
+        public InputAction @ArrowUp => m_Wrapper.m_OnFoot_ArrowUp;
+        public InputAction @ArrowLeft => m_Wrapper.m_OnFoot_ArrowLeft;
+        public InputAction @ArrowRight => m_Wrapper.m_OnFoot_ArrowRight;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -282,6 +374,18 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @TakePicture.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnTakePicture;
                 @TakePicture.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnTakePicture;
                 @TakePicture.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnTakePicture;
+                @ArrowDown.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowDown;
+                @ArrowDown.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowDown;
+                @ArrowDown.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowDown;
+                @ArrowUp.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowUp;
+                @ArrowUp.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowUp;
+                @ArrowUp.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowUp;
+                @ArrowLeft.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowLeft;
+                @ArrowLeft.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowLeft;
+                @ArrowLeft.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowLeft;
+                @ArrowRight.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowRight;
+                @ArrowRight.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowRight;
+                @ArrowRight.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnArrowRight;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -301,6 +405,18 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @TakePicture.started += instance.OnTakePicture;
                 @TakePicture.performed += instance.OnTakePicture;
                 @TakePicture.canceled += instance.OnTakePicture;
+                @ArrowDown.started += instance.OnArrowDown;
+                @ArrowDown.performed += instance.OnArrowDown;
+                @ArrowDown.canceled += instance.OnArrowDown;
+                @ArrowUp.started += instance.OnArrowUp;
+                @ArrowUp.performed += instance.OnArrowUp;
+                @ArrowUp.canceled += instance.OnArrowUp;
+                @ArrowLeft.started += instance.OnArrowLeft;
+                @ArrowLeft.performed += instance.OnArrowLeft;
+                @ArrowLeft.canceled += instance.OnArrowLeft;
+                @ArrowRight.started += instance.OnArrowRight;
+                @ArrowRight.performed += instance.OnArrowRight;
+                @ArrowRight.canceled += instance.OnArrowRight;
             }
         }
     }
@@ -312,5 +428,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnOpenCamera(InputAction.CallbackContext context);
         void OnTakePicture(InputAction.CallbackContext context);
+        void OnArrowDown(InputAction.CallbackContext context);
+        void OnArrowUp(InputAction.CallbackContext context);
+        void OnArrowLeft(InputAction.CallbackContext context);
+        void OnArrowRight(InputAction.CallbackContext context);
     }
 }

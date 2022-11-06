@@ -5,22 +5,66 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
+
+    public VoidEventChannelSO DownEvent;
+
+    public VoidEventChannelSO UpEvent;
+
+    public VoidEventChannelSO LeftEvent;
+
+    public VoidEventChannelSO RightEvent;
     private PlayerInput playerInput;
     private PlayerInput.OnFootActions onFoot;
     private PlayerLook look;
     private PlayerMotor motor;
 
     private PhotoCapture takePic;
+
+    private MovingObject movingObject;
     
     // Start is called before the first frame update
     void Awake()
     {
+        
         playerInput = new PlayerInput();
         onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         takePic = GetComponent<PhotoCapture>();
-        // onFoot.Jump.performed += ctx => motor.Jump();
+        movingObject = GetComponent<MovingObject>();
+        onFoot.ArrowDown.performed += ctx => 
+        {
+            if (DownEvent != null) 
+            {
+                DownEvent.OnEventRaised();
+            }
+        };
+
+
+
+        onFoot.ArrowUp.performed += ctx => 
+        {
+            if (UpEvent != null) 
+            {
+                UpEvent.OnEventRaised();
+            }
+        };
+        onFoot.ArrowLeft.performed += ctx =>
+         {
+            if (LeftEvent != null) 
+            {
+                LeftEvent.OnEventRaised();
+            }
+        };
+        onFoot.ArrowRight.performed += ctx => 
+        {
+            if (RightEvent != null) 
+            {
+                Debug.Log("right");
+                RightEvent.OnEventRaised();
+            }
+        };
+        onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
         onFoot.TakePicture.performed += ctx => takePic.TakePhoto();
     }
@@ -29,6 +73,7 @@ public class InputManager : MonoBehaviour
     void FixedUpdate()
     {
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        
     }
 
     private void LateUpdate()
