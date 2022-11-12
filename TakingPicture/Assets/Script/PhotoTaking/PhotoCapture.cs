@@ -26,7 +26,7 @@ public class PhotoCapture : MonoBehaviour
 
     private WaterRising waterRise;
 
-    private bool enterCameraScope = false;
+    public bool enterCameraScope = false;
 
 
 

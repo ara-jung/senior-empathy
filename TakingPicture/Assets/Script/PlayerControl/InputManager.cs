@@ -21,6 +21,10 @@ public class InputManager : MonoBehaviour
     private PhotoCapture takePic;
 
     private MovingObject movingObject;
+
+    private CheckIsPortalSelected clickPortal;
+
+    private bool isCameraScopedChanged;
     
     // Start is called before the first frame update
     void Awake()
@@ -32,6 +36,7 @@ public class InputManager : MonoBehaviour
         look = GetComponent<PlayerLook>();
         takePic = GetComponent<PhotoCapture>();
         movingObject = GetComponent<MovingObject>();
+        clickPortal = GetComponent<CheckIsPortalSelected>();
         onFoot.ArrowDown.performed += ctx => 
         {
             if (DownEvent != null) 
@@ -66,14 +71,14 @@ public class InputManager : MonoBehaviour
         };
         onFoot.Jump.performed += ctx => motor.Jump();
         onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
-        onFoot.TakePicture.performed += ctx => takePic.TakePhoto();
+        onFoot.TakePicture.performed += ctx => clickPortal.Move();
+        
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-        
     }
 
     private void LateUpdate()

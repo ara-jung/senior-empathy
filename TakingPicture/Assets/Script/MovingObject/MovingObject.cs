@@ -12,26 +12,30 @@ public class MovingObject : MonoBehaviour
 
     public VoidEventChannelSO stopEvent;
 
+    public DirectionEventChannelSO move;
+
     public Rigidbody rigidbody;
 
 
     float speed = 0;
     bool isMoving = false;
-   
-
+    bool isChecking = false;
+    private Vector3 lastUpdatePos = Vector3.zero;
+    private Vector3 dist;
     int collisionTrackingNumber = 0;
     Vector3 direction = Vector3.up;
+    HashSet<Collider> touched = new HashSet<Collider>();
     // Update is called once per frame
     void Update()
     { 
-        
-        if (speed > 0)
-        {
+          
+
+        if (isMoving)
+        {   
             Vector3 locVel = direction * speed;
             rigidbody.velocity = transform.TransformDirection(locVel);
-            StartCoroutine(CheckMoving());
         }
-
+   
     }
 
     void OnEnable()
@@ -41,6 +45,7 @@ public class MovingObject : MonoBehaviour
         leftEvent.OnEventRaised += moveRight;
         rightEvent.OnEventRaised += moveLeft;
         stopEvent.OnEventRaised += stop;
+        move.OnEventRaised += moveDirection;
     }
 
     void OnDisable()
@@ -49,18 +54,35 @@ public class MovingObject : MonoBehaviour
         upEvent.OnEventRaised -= moveUp;
         leftEvent.OnEventRaised -= moveRight;
         rightEvent.OnEventRaised -= moveLeft;
+        stopEvent.OnEventRaised -= stop;
     }
 
     public void moveDirection(Vector3 direction) 
     {
-        Debug.Log(this.direction);
-         Debug.Log(direction);
-        if (this.direction != direction && speed == 0)
+        if (this.direction != direction && !isMoving)
         {
             speed = 10;
             this.direction = direction;
+            isMoving = true;
         }
         
+    }
+    public void OnTriggerEnter(Collider collider) 
+    {
+        int prevSize = touched.Count;
+        if (collider.transform.name != "Floor") {
+            touched.Add(collider);
+
+            if (touched.Count != prevSize) 
+            {
+                // Debug.Log("added" + collider.transform.name);
+                touched.Clear();
+                touched.Add(collider);
+                isMoving = false;
+                // Debug.Log("stopped");
+            }
+            // Debug.Log(touched);
+        }
     }
 
     public void stop()
@@ -88,21 +110,22 @@ public class MovingObject : MonoBehaviour
 
     public void moveLeft()
     {
-      
         moveDirection(Vector3.left);
     }
-    private IEnumerator CheckMoving()
-    {
-        Vector3 startPos = transform.position;
-        yield return new WaitForSeconds(0.5f);
+    // }
+    // private IEnumerator CheckMoving()
+    // {   isChecking = true;
+    //     Vector3 startPos = transform.position;
+    //     yield return new WaitForSeconds(0.5f);
 
-        Vector3 finalPos = transform.position;
-        if(startPos.x == finalPos.x && startPos.z == finalPos.z)
-        {
-            speed = 0;
-            yield break;
-        }
+    //     Vector3 finalPos = transform.position;
+    //     if(startPos.x == finalPos.x && startPos.z == finalPos.z)
+    //     {
+    //         speed = 0;
+    //         yield break;
+    //     }
+    //     isChecking = false;
            
-    }
+    // }
     
 }

@@ -6,8 +6,13 @@ public class RayCasting : MonoBehaviour
 {
     public Camera camera;
 
+    [HideInInspector]
     public RaycastHit hit;
+
+    [HideInInspector]
     public bool checkAlign = false;
+    
+    [HideInInspector]
     public bool isCorrectPosition = false;
     bool hits;
     // Update is called once per frame
