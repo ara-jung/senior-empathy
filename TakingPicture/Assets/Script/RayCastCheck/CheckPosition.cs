@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class CheckPosition : MonoBehaviour
 {
-    private RayCasting cast;
+    private RaycastHit cast;
     void OnTriggerEnter(Collider other)
     {
-        cast = other.GetComponent<RayCasting>();
-        cast.isCorrectPosition = true;
+       
     }
     void OnTriggerExit(Collider other)
     {
-        cast = other.GetComponent<RayCasting>();
-        cast.isCorrectPosition = false;
+     
     }
 
     void DisableObject()
