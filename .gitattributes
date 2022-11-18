@@ -1,1 +1,2 @@
 *.fbx filter=lfs diff=lfs merge=lfs -text
+TakingPicture/Assets/level1.1.fbx filter=lfs diff=lfs merge=lfs -text
