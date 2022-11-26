@@ -481,7 +481,7 @@ ModelImporter:
       position: {x: -0.079204336, y: 0.1303512, z: -0.0013474083}
       rotation: {x: 0, y: 0, z: 0.7071068, w: -0.7071068}
       scale: {x: 1.0000001, y: 0.99999994, z: 1.0000005}
-    armTwist: 0.411
+    armTwist: 0.389
     foreArmTwist: 0.61
     upperLegTwist: 0.664
     legTwist: 0.58
