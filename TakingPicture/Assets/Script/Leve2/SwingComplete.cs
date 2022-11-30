@@ -12,6 +12,8 @@ public class SwingComplete : MonoBehaviour
 
     public VoidEventChannelSO stopEvent;
 
+    public VoidEventChannelSO objectToPlayAnimation;
+
     private int winCount = 0;
     private bool firstTocuch = false;
     private bool secondTouch = false;
@@ -24,11 +26,17 @@ public class SwingComplete : MonoBehaviour
         secondTouchedEvent.OnEventRaised += secondTouched;
         secondPassedEvent.OnEventRaised += secondPassed;
     }
+    
+    // void Start()
+    // {
+    //     Debug.Log("start");
+    //     objectToPlayAnimation.RaiseEvent();
+    // }
 
     void firstTouched()
     {
-        firstTocuch = true;
         isSolved();
+        firstTocuch = true;
     }
     void firstPassed()
     {
@@ -52,7 +60,9 @@ public class SwingComplete : MonoBehaviour
         if (firstTocuch && secondTouch){
             if (stopEvent != null) 
             {
+                Debug.Log("started");
                 stopEvent.RaiseEvent();
+                objectToPlayAnimation.RaiseEvent();
             }
         }
     }

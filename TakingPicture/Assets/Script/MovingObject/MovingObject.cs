@@ -55,6 +55,7 @@ public class MovingObject : MonoBehaviour
         leftEvent.OnEventRaised -= moveRight;
         rightEvent.OnEventRaised -= moveLeft;
         stopEvent.OnEventRaised -= stop;
+        move.OnEventRaised -= moveDirection;
     }
 
     public void moveDirection(Vector3 direction) 
@@ -89,6 +90,7 @@ public class MovingObject : MonoBehaviour
     {   
         Debug.Log("stopped");
         rigidbody.velocity = new Vector3(0, 0, 0);
+        Debug.Log(transform.name);
         speed = 0;
     }
 
@@ -112,20 +114,6 @@ public class MovingObject : MonoBehaviour
     {
         moveDirection(Vector3.left);
     }
-    // }
-    // private IEnumerator CheckMoving()
-    // {   isChecking = true;
-    //     Vector3 startPos = transform.position;
-    //     yield return new WaitForSeconds(0.5f);
-
-    //     Vector3 finalPos = transform.position;
-    //     if(startPos.x == finalPos.x && startPos.z == finalPos.z)
-    //     {
-    //         speed = 0;
-    //         yield break;
-    //     }
-    //     isChecking = false;
-           
-    // }
+ 
     
 }
