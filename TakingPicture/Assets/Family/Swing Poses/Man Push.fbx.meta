@@ -11,7 +11,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: people_pal
-    second: {fileID: -7493946954128563693, guid: 109ce2e01c33bff4f90194355f19cc81, type: 3}
+    second: {fileID: 2100000, guid: 004c511186e3e7e45a335afaf34b02f9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
