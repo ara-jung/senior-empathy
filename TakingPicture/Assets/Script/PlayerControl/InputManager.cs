@@ -18,9 +18,9 @@ public class InputManager : MonoBehaviour
     private PlayerLook look;
     private PlayerMotor motor;
 
-    private PhotoCapture takePic;
+ //  private PhotoCapture takePic;
 
-    private MovingObject movingObject;
+//    private MovingObject movingObject;
 
     private CheckIsPortalSelected clickPortal;
 
@@ -34,8 +34,8 @@ public class InputManager : MonoBehaviour
         onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
-        takePic = GetComponent<PhotoCapture>();
-        movingObject = GetComponent<MovingObject>();
+  //      takePic = GetComponent<UnityEngine.Windows.WebCam.PhotoCapture>();
+//      movingObject = GetComponent<MovingObject>();
         clickPortal = GetComponent<CheckIsPortalSelected>();
         onFoot.ArrowDown.performed += ctx => 
         {
@@ -70,8 +70,8 @@ public class InputManager : MonoBehaviour
             }
         };
         onFoot.Jump.performed += ctx => motor.Jump();
-        onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
-        onFoot.TakePicture.performed += ctx => clickPortal.Move();
+      //  onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
+   //     onFoot.TakePicture.performed += ctx => clickPortal.Move();
         
     }
 
