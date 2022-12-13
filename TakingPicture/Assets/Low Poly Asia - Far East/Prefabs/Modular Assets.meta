@@ -1,8 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 755393862e10c4b479fee7b9b977d19e
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
+=======
+guid: 0d48216a0022a2346a69e6e8199996b3
+folderAsset: yes
+timeCreated: 1478090687
+licenseType: Store
+DefaultImporter:
+>>>>>>> IHateUnity
   userData: 
   assetBundleName: 
   assetBundleVariant: 

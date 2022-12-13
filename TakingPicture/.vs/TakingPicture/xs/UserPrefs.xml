@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{845C1347-2DCF-3D81-09A1-9C00463FAB6E}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/PlayerControl/InputManager.cs">
+    <Files>
+      <File FileName="Assets/MenuInteraction.cs" Line="29" Column="22" />
+      <File FileName="Assets/Script/PlayerControl/InputManager.cs" Line="8" Column="5" />
+      <File FileName="Assets/Script/PlayerControl/PlayerMotor.cs" Line="12" Column="28" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
