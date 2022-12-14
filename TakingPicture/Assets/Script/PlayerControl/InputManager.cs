@@ -71,7 +71,7 @@ public class InputManager : MonoBehaviour
         };
         onFoot.Jump.performed += ctx => motor.Jump();
       //  onFoot.OpenCamera.performed += ctx => takePic.EnterOrExitCamera();
-   //     onFoot.TakePicture.performed += ctx => clickPortal.Move();
+        onFoot.TakePicture.performed += ctx => clickPortal.Move();
         
     }
 
