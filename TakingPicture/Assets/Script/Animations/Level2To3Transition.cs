@@ -42,6 +42,11 @@ public class Level2To3Transition : MonoBehaviour
             {
                 playAnimation[play].RaiseEvent();
             }
+            else 
+            {
+                play = -1;
+                startPlaying();
+            }
         }
     }
 

@@ -8,6 +8,8 @@ public class AnimationManage : MonoBehaviour
     public VoidEventChannelSO DonePlayingAnimation;
 
     public VoidEventChannelSO solvedPuzzle;
+
+    public VoidEventChannelSO animationFinished;
     int play = -1;
     int playCount = 0;
 
@@ -32,6 +34,10 @@ public class AnimationManage : MonoBehaviour
             if (play < playAnimation.Count)
             {
                 playAnimation[play].RaiseEvent();
+            }
+            else 
+            {
+                animationFinished.RaiseEvent();
             }
         }
     }
