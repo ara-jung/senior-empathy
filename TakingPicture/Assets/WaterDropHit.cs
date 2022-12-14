@@ -58,8 +58,9 @@ public class WaterDropHit : MonoBehaviour
                 if (hit.transform.gameObject.layer != 6)
                 { //anything besides a wall
                     //test if walls between drop and player (no phasing through walls)
-                    if (Physics.Raycast(campos, raydir, out hit2, raydir.magnitude, nowalls))
+                    if (Physics.Raycast(campos, raydir, out hit2, raydir.magnitude, onlywalls))
                     {
+                      //  print("wallhit");
                         //pass
                     }
                     else
@@ -74,6 +75,7 @@ public class WaterDropHit : MonoBehaviour
                         GetComponent<Collider>().enabled = false;
                         gameObject.GetComponentInChildren<Transform>().localScale = gameObject.transform.localScale;
                         GetComponentInChildren<ParticleSystem>().Play();
+                      // print("Hit");
                         GetComponent<MeshRenderer>().enabled = false;
 
                         //fill container
@@ -95,7 +97,7 @@ public class WaterDropHit : MonoBehaviour
 
             }
             //render drop in front of stuff it's about to hit
-            for (int framesahead = 0; framesahead < FRAMES; framesahead++)
+            for (int framesahead = 0; framesahead < FRAMES; framesahead+=2)
             {
                 Vector3 nextFramePos = gameObject.transform.position + framesahead*Time.deltaTime * GetComponent<Rigidbody>().velocity;
                 raydir = nextFramePos - campos;
@@ -134,7 +136,7 @@ public class WaterDropHit : MonoBehaviour
         if (v1.x == 0){
             res.x = 1;
         } else if (v2.x == 0){
-            res.x = 1; //ten thousand is almost infinite right?
+            res.x = 1;
         }else{
             res.x = v1.x / v2.x;
         }

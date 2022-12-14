@@ -19,7 +19,7 @@ public class photoreveal : MonoBehaviour
     void Update()
     {
         if(sources.Count == 3){
-            if( (GetComponentInChildren<Photoreveal2>().gameObject.transform.position - player.transform.position).sqrMagnitude < 120 ){
+            if( (GetComponentInChildren<Light>().gameObject.transform.position - player.transform.position).sqrMagnitude < 120 ){
                 Debug.Log("loading level2");
                 StartCoroutine(LoadYourAsyncScene());
             }
@@ -51,8 +51,8 @@ public class photoreveal : MonoBehaviour
     // This is particularly good for creating loading screens.
     // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
     // a sceneBuildIndex of 1 as shown in Build Settings.
-
-    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scenes/Level2");
+        
+    AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scenes/Level2/Level2");
 
     // Wait until the asynchronous scene fully loads
     while (!asyncLoad.isDone)

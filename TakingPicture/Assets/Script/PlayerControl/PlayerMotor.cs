@@ -37,7 +37,7 @@ public class PlayerMotor : MonoBehaviour
         }
         playerVelocity.y += gravity * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        if((input.y != 0 || input.x != 0) && isGrounded) 
+        if((input.y != 0 || input.x != 0) && isGrounded ) 
         {
             walking.enabled = true;
         }

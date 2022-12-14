@@ -11,7 +11,7 @@ TagManager:
   - DetectRayCast
   - Water
   - UI
-  - DetectPortalLayer
+  - DetectPortalLayer, Walls
   - 
   - 
   - 
