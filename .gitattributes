@@ -3,3 +3,4 @@
 =======
 TakingPicture/Assets/level1.1.fbx filter=lfs diff=lfs merge=lfs -text
 >>>>>>> IHateUnity
+*.mp4 filter=lfs diff=lfs merge=lfs -text

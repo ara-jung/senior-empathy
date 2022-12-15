@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuInteraction : MonoBehaviour
 {
+    const  float fadetime = 10f;
     public GameObject water;
     public GameObject button2text;
     public Button button1;
@@ -15,11 +16,21 @@ public class MenuInteraction : MonoBehaviour
     public GameObject playerCamera;
     public GameObject targetCamera;
     public List<GameObject> cracks;
+    public AudioSource crackingnoise;
+    public AudioSource intensemusic;
+    public AudioSource bgm;
+    public GameObject invisibleWall;
+    public GameObject DrowningAnimation;
     private int crackind = -1;
     private bool showing = false;
     private float timer=0;
     private float flashtimer=0;
+    private float fadetimer = 0;
     bool movingforward;
+    private bool animationstarted = false;
+    public VoidEventChannelSO startAnimation;
+    public VoidEventChannelSO startTransition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +38,9 @@ public class MenuInteraction : MonoBehaviour
         gameObject.GetComponent<Canvas>().enabled = false;
         button1.onClick.AddListener(()=>buttonPressed());
         button2.onClick.AddListener(()=> buttonPressed());
+        player.GetComponent<PlayerMotor>().speed *= 1.5f;
+        
+       
     }
 
     void buttonPressed(){
@@ -34,12 +48,23 @@ public class MenuInteraction : MonoBehaviour
         if (crackind >= cracks.Count){
             gameObject.GetComponent<Canvas>().enabled = false;
             movingforward = true;
-           
+            player.transform.localPosition = targetCamera.transform.localPosition;
+            playerCamera.SetActive(true);
+            targetCamera.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            player.GetComponent<PlayerMotor>().speed *= 2;
+            player.GetComponent<PlayerMotor>().gravity *= .3f;
+            timer = 0;
+            fadetimer = 0;
+            invisibleWall.SetActive(false);
+
+
+
 
         }
         cracks[crackind].GetComponent<RawImage>().enabled = true;
+        crackingnoise.Play();
 
-       
 
     }
 
@@ -48,18 +73,49 @@ public class MenuInteraction : MonoBehaviour
     {
         if (movingforward){
             timer += Time.deltaTime;
-            if (timer > 10f){
-
+            fadetimer += Time.deltaTime;
+            intensemusic.volume = Mathf.Clamp(1-(fadetimer / 2f), 0, .6f);
+            if (timer > 1f){
+                timer = 0;
+                //  StartCoroutine(LoadYourAsyncScene());
+                startTransition.RaiseEvent();
+                print("going");
 
             }
-            player.GetComponent<PlayerMotor>().ProcessMove(new Vector2(1, 0));
+
+            player.GetComponent<PlayerMotor>().ProcessMove(new Vector2(0, 1));
             return;
 
         }
-        if(Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.E)){
-          //  print("woohoo");
-            if ((player.gameObject.transform.position - target.gameObject.transform.position).sqrMagnitude < 100000*50*50)
+        if ((player.gameObject.transform.position - target.gameObject.transform.position).sqrMagnitude < 50 * 50)
+        {
+            if (!intensemusic.isPlaying){
+                intensemusic.Play();
+            }
+            fadetimer += Time.deltaTime;
+            
+            bgm.volume = Mathf.Clamp(1-(fadetimer / fadetime), 0, .7f);
+            intensemusic.volume = Mathf.Clamp(fadetimer / fadetime, 0, .6f);
+
+
+
+        }
+        if ((player.gameObject.transform.position - target.gameObject.transform.position).sqrMagnitude < 25 * 25)
+        {
+            if (!animationstarted)
             {
+                animationstarted = true;
+                startAnimation.RaiseEvent();
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.E)){
+          //  print("woohoo");
+            if ((player.gameObject.transform.position - target.gameObject.transform.position).sqrMagnitude < 25*25)
+            {
+
+                //End Animation
                 playerCamera.SetActive(false);
                 targetCamera.SetActive(true);
                 gameObject.GetComponent<Canvas>().enabled = true;
@@ -103,7 +159,7 @@ public class MenuInteraction : MonoBehaviour
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scenes/Final");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scenes/FinalCutscene/Final");
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
