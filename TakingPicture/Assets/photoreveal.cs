@@ -19,7 +19,7 @@ public class photoreveal : MonoBehaviour
     void Update()
     {
         if(sources.Count == 3){
-            if( (GetComponentInChildren<Light>().gameObject.transform.position - player.transform.position).sqrMagnitude < 120 ){
+            if( (GetComponentInChildren<Light>().gameObject.transform.position - player.transform.position).sqrMagnitude < 150 ){
                 Debug.Log("loading level2");
                 StartCoroutine(LoadYourAsyncScene());
             }

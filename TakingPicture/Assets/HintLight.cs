@@ -25,13 +25,13 @@ public class HintLight : MonoBehaviour
 
 
             }
-            if (time > 155)
+            if (time > 15)
             {
                 gameObject.GetComponent<Light>().intensity = Mathf.Sin(time * 3);
 
 
             }
-            if (time >20){
+            if (time >30){
                 arrow.SetActive(true);
             }
 

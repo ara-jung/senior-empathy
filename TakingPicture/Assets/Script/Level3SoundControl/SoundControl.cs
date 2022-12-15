@@ -6,6 +6,6 @@ public class SoundControl : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-       this.gameObject.SetActive(false);
+        this.gameObject.GetComponent<AudioSource>().loop = false;
     }
 }
