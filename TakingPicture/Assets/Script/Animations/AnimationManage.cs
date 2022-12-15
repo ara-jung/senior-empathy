@@ -8,6 +8,8 @@ public class AnimationManage : MonoBehaviour
     public VoidEventChannelSO DonePlayingAnimation;
 
     public VoidEventChannelSO solvedPuzzle;
+
+    public VoidEventChannelSO animationFinished;
     int play = -1;
     int playCount = 0;
 
@@ -23,15 +25,20 @@ public class AnimationManage : MonoBehaviour
     private void playNext()
     {   
         playCount += 1;
+        Debug.Log("This is playcount");
         Debug.Log(playCount);
         if (playCount % animationToPlay == 0)
         {
-            Debug.Log("Started Playing: " + play);
             play += 1;
 
             if (play < playAnimation.Count)
             {
                 playAnimation[play].RaiseEvent();
+            }
+            else 
+            {
+                Debug.Log("raised event for animation finished");
+                animationFinished.RaiseEvent();
             }
         }
     }
@@ -41,7 +48,6 @@ public class AnimationManage : MonoBehaviour
 
         if(play == -1)
         {
-            Debug.Log("Started Playing");
             playAnimation[0].RaiseEvent();
             play += 1;
         }    
