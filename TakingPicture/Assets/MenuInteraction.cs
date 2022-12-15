@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuInteraction : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class MenuInteraction : MonoBehaviour
     public GameObject target;
     public GameObject playerCamera;
     public GameObject targetCamera;
+    public List<GameObject> cracks;
+    private int crackind = -1;
     private bool showing = false;
     private float timer=0;
     private float flashtimer=0;
+    bool movingforward;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +30,32 @@ public class MenuInteraction : MonoBehaviour
     }
 
     void buttonPressed(){
-        print("Add transition to final scene here");
-        //Add transition to final scene here
+        crackind++;
+        if (crackind >= cracks.Count){
+            gameObject.GetComponent<Canvas>().enabled = false;
+            movingforward = true;
+           
+
+        }
+        cracks[crackind].GetComponent<RawImage>().enabled = true;
+
+       
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (movingforward){
+            timer += Time.deltaTime;
+            if (timer > 10f){
+
+
+            }
+            player.GetComponent<PlayerMotor>().ProcessMove(new Vector2(1, 0));
+            return;
+
+        }
         if(Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.E)){
           //  print("woohoo");
             if ((player.gameObject.transform.position - target.gameObject.transform.position).sqrMagnitude < 100000*50*50)
@@ -70,6 +92,23 @@ public class MenuInteraction : MonoBehaviour
             }
 
 
+        }
+    }
+
+
+    IEnumerator LoadYourAsyncScene()
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("Scenes/Final");
+
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
         }
     }
 }
