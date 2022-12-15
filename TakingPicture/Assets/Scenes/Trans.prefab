@@ -207,7 +207,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6090607832620646327}
-  - component: {fileID: 6090607832620646326}
   - component: {fileID: 6090607832620646325}
   m_Layer: 5
   m_Name: Trans
@@ -237,20 +236,6 @@ RectTransform:
   m_AnchoredPosition: {x: 553.1, y: 194.40005}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6090607832620646326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6090607832620646324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190fb5955dbeefb4388851322179bd78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6090607832620646325}
-  animationsFinished: []
 --- !u!95 &6090607832620646325
 Animator:
   serializedVersion: 4

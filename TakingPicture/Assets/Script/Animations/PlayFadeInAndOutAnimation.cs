@@ -36,6 +36,6 @@ public class PlayFadeInAndOutAnimation : MonoBehaviour
         this.fadingAnimation.Play("ObjectFadeOut");
         yield return new WaitForSeconds(2.0f);
         DonePlayingAnimation.RaiseEvent();
-         this.gameObject.GetComponent<Renderer>().enabled = false;
+        this.gameObject.GetComponent<Renderer>().enabled = false;
     }
 }

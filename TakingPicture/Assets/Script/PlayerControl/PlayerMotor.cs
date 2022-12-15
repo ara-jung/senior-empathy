@@ -12,16 +12,41 @@ public class PlayerMotor : MonoBehaviour
     public float speed = 10f;
     public float gravity = -9.8f;
     public float jumpHeight = 1.5f;
+
+    public List<VoidEventChannelSO> stopPlayer;
+    public List<VoidEventChannelSO> startPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        foreach (VoidEventChannelSO stop in stopPlayer)
+        {
+            stop.OnEventRaised += SetZero;
+        }
+
+        foreach (VoidEventChannelSO start in startPlayer)
+        {
+            start.OnEventRaised += ChangeSpeed;
+        }
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
         isGrounded = controller.isGrounded;
+    }
+
+    void ChangeSpeed()
+    {
+        speed = 10f;
+    }
+
+    void SetZero()
+    {
+        speed = 0f;
     }
 
     //gets the inputs from our InputManager.cs and apply them to our character controller

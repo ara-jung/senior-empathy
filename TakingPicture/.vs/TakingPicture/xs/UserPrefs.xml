@@ -1,12 +1,19 @@
 ﻿<Properties StartupConfiguration="{845C1347-2DCF-3D81-09A1-9C00463FAB6E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/RayCastCheck/RayCasting.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Animations/PlayFadeInAndOutAnimation.cs">
     <Files>
       <File FileName="Assets/MenuInteraction.cs" Line="29" Column="22" />
-      <File FileName="Assets/Script/PlayerControl/InputManager.cs" />
-      <File FileName="Assets/Script/PlayerControl/PlayerMotor.cs" />
+      <File FileName="Assets/Script/PlayerControl/PlayerMotor.cs" Line="31" Column="10" />
       <File FileName="Assets/Script/MovingObject/PortalTrigger.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/RayCastCheck/CheckIsPortalSelected.cs" Line="41" Column="10" />
-      <File FileName="Assets/Script/RayCastCheck/RayCasting.cs" Line="15" Column="22" />
+      <File FileName="Assets/Script/RayCastCheck/RayCasting.cs" Line="11" Column="1" />
+      <File FileName="Assets/Script/Transition.cs" Line="25" Column="6" />
+      <File FileName="Assets/Script/touchedForTrans.cs" Line="4" Column="1" />
+      <File FileName="Assets/Script/MovingObject/MovingObject.cs" Line="11" Column="41" />
+      <File FileName="Assets/Script/Animations/PortalFade.cs" Line="14" Column="2" />
+      <File FileName="Assets/Script/Leve2/ActivatePuzzle.cs" Line="19" Column="42" />
+      <File FileName="Assets/Script/WaterRising/WaterRising.cs" Line="21" Column="10" />
+      <File FileName="Assets/Script/Animations/AnimationManage.cs" Line="40" Column="66" />
+      <File FileName="Assets/Script/Animations/PlayFadeInAndOutAnimation.cs" Line="39" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

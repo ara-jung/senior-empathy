@@ -11,10 +11,9 @@ public class Transition : MonoBehaviour
     public VoidEventChannelSO touchedTrans;
     
     public List<VoidEventChannelSO> animationsFinished;
-    void Start()
-    {
-        this.gameObject.GetComponent<Renderer>().enabled = false;
-    }
+
+    public VoidEventChannelSO portalAppear;
+    
 
     void OnEnable()
     {
@@ -28,10 +27,9 @@ public class Transition : MonoBehaviour
     void incrementWin()
     {
         transitionCondition += 1;
-        Debug.Log("+1");
         if (transitionCondition == 3)
         {
-            this.gameObject.GetComponent<Renderer>().enabled = true;
+            portalAppear.RaiseEvent();
         }
     }
 
