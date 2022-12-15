@@ -1,15 +1,17 @@
 ﻿<Properties StartupConfiguration="{845C1347-2DCF-3D81-09A1-9C00463FAB6E}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/photoreveal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/MenuInteraction.cs">
     <Files>
       <File FileName="Assets/WaterDropHit.cs" Line="63" Column="25" />
       <File FileName="Assets/WaterDropper.cs" Line="1" Column="1" />
-      <File FileName="Assets/photoreveal.cs" Line="1" Column="1" />
+      <File FileName="Assets/photoreveal.cs" Line="20" Column="6" />
       <File FileName="Assets/ContainerFill.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerControl/InputManager.cs" Line="19" Column="30" />
+      <File FileName="Assets/Script/PlayerControl/InputManager.cs" Line="20" Column="5" />
       <File FileName="Assets/Script/PlayerControl/PlayerMotor.cs" Line="40" Column="57" />
       <File FileName="Assets/HintLight.cs" Line="24" Column="20" />
       <File FileName="Assets/Photoreveal2.cs" Line="1" Column="1" />
+      <File FileName="Assets/menu.cs" Line="19" Column="9" />
+      <File FileName="Assets/MenuInteraction.cs" Line="23" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
