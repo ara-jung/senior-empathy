@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayFadeInAndOutAnimation : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class PlayFadeInAndOutAnimation : MonoBehaviour
         this.gameObject.GetComponent<Renderer>().enabled = false;
     }
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void OnEnable()
     {
         playAnimation.OnEventRaised += play;
@@ -22,7 +28,14 @@ public class PlayFadeInAndOutAnimation : MonoBehaviour
 
     private void play(){
         Debug.Log("Started playing animation");
+        if (gameObject == null)
+        {
+            Debug.Log("aaah");
+            fadingAnimation = this.gameObject.GetComponent<Animator>();
+        }
         this.gameObject.GetComponent<Renderer>().enabled = true;
+        
+
         this.fadingAnimation.Play("ObjectFadeIn");
         StartCoroutine("waitForPlay");
          

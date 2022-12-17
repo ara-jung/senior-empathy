@@ -1,26 +1,43 @@
 ﻿<Properties StartupConfiguration="{845C1347-2DCF-3D81-09A1-9C00463FAB6E}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Level3/Level3ToFinal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/animatorsmissing.cs">
     <Files>
-      <File FileName="Assets/WaterDropHit.cs" Line="1" Column="1" />
-      <File FileName="Assets/WaterDropper.cs" Line="1" Column="1" />
-      <File FileName="Assets/photoreveal.cs" Line="24" Column="17" />
-      <File FileName="Assets/ContainerFill.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/PlayerControl/InputManager.cs" Line="84" Column="30" />
-      <File FileName="Assets/HintLight.cs" Line="36" Column="14" />
-      <File FileName="Assets/Photoreveal2.cs" Line="1" Column="1" />
-      <File FileName="Assets/MenuInteraction.cs" Line="98" Column="45" />
-      <File FileName="Assets/Script/Level3SoundControl/SoundControl.cs" Line="9" Column="66" />
-      <File FileName="Assets/Script/Animations/AnimationManage.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Animations/PlayFadeInAndOutAnimation.cs" Line="22" Column="5" />
-      <File FileName="Assets/Script/Level3/Level3ToFinal.cs" Line="55" Column="6" />
-      <File FileName="Assets/Script/Transition.cs" Line="6" Column="4" />
+      <File FileName="Assets/MenuInteraction.cs" Line="48" Column="24" />
+      <File FileName="Assets/Script/Transition.cs" Line="3" Column="1" />
+      <File FileName="Assets/photoreveal1.cs" Line="24" Column="126" />
+      <File FileName="Assets/Script/Level1/LevelOneTrans.cs" Line="12" Column="1" />
+      <File FileName="Assets/Script/Animations/Level2To3Transition.cs" Line="1" Column="1" />
+      <File FileName="Assets/HintLight.cs" Line="34" Column="28" />
+      <File FileName="Assets/DoorOpen.cs" Line="26" Column="93" />
+      <File FileName="Assets/WaterDropHit.cs" Line="79" Column="70" />
+      <File FileName="Assets/Script/Leve2/CheatCode.cs" Line="24" Column="14" />
+      <File FileName="Assets/Script/touchedForTrans.cs" Line="12" Column="10" />
+      <File FileName="Assets/Script/PlayerControl/InputManager.cs" Line="74" Column="1" />
+      <File FileName="Assets/Script/Events/VoidEventChannelSO.cs" Line="15" Column="30" />
+      <File FileName="Assets/Script/Animations/PlayFadeInAndOutAnimation.cs" Line="24" Column="48" />
+      <File FileName="Assets/Script/Animations/AnimationManage.cs" Line="41" Column="34" />
+      <File FileName="Assets/animatorsmissing.cs" Line="16" Column="24" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TakingPicture" expanded="True" selected="True" />
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6464894a-6c3e-4129-b3b4-1948b7a23a6b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>

@@ -73,9 +73,11 @@ public class WaterDropHit : MonoBehaviour
                         GetComponent<Rigidbody>().velocity = Vector3.zero;
                         // Debug.Log(gameObject.transform.position);
                         GetComponent<Collider>().enabled = false;
+                        GetComponentInChildren<Light>().gameObject.SetActive(false);
                         gameObject.GetComponentInChildren<Transform>().localScale = gameObject.transform.localScale;
                         GetComponentInChildren<ParticleSystem>().Play();
-                      // print("Hit");
+                        GetComponentInChildren<AudioSource>().Play();
+                        // print("Hit");
                         GetComponent<MeshRenderer>().enabled = false;
 
                         //fill container

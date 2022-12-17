@@ -31,7 +31,7 @@ public class HintLight : MonoBehaviour
 
 
             }
-            if (time >30){
+            if (time > 50){
                 arrow.SetActive(true);
             }
 

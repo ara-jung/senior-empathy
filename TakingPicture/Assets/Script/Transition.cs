@@ -39,7 +39,7 @@ public class Transition : MonoBehaviour
         Debug.Log("tran");
         if (transitionCondition == 3)
         {
-            FadeToLevel(1);
+            FadeToLevel(2);
         }
     }
     public void FadeToLevel(int levelIndex) 

@@ -23,7 +23,8 @@ public class DoorOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ( Mathf.Abs( ( targetRot -  gameObject.transform.localEulerAngles.z ) % 360) > .1){
+        if ( Mathf.Abs( ( targetRot -  gameObject.transform.localEulerAngles.z )) % 360 > 10){
+            Debug.Log(gameObject.transform.localEulerAngles.z);
             float angle = (targetRot - gameObject.transform.localEulerAngles.z) * Time.deltaTime * speed;
             gameObject.transform.RotateAround(hingecoords, Vector3.up, angle );
                      
